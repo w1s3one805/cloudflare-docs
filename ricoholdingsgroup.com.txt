@@ -1,0 +1,45 @@
+;;
+;; Domain:     ricoholdingsgroup.com.
+;; Exported:   2024-09-08 19:13:24
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+ricoholdingsgroup.com	3600	IN	SOA	chuck.ns.cloudflare.com. dns.cloudflare.com. 2047748940 10000 2400 604800 3600
+
+;; NS Records
+ricoholdingsgroup.com.	86400	IN	NS	chuck.ns.cloudflare.com.
+ricoholdingsgroup.com.	86400	IN	NS	jewel.ns.cloudflare.com.
+
+;; CNAME Records
+chuck.ns.cloudflare.com.ricoholdingsgroup.com.	1	IN	CNAME	www.google.com.
+chuck.ns.cloudflare.com_ww.ricoholdingsgroup.com.	1	IN	CNAME	www.google.com.
+
+;; MX Records
+chuck.ns.cloudflare.com_ww.ricoholdingsgroup.com.	1	IN	MX	49 route2.mx.cloudflare.net.
+jewel.ns.cloudflare.com.ricoholdingsgroup.com.	1	IN	MX	47 route1.mx.cloudflare.net.
+
+;; TXT Records
+chuck.ns.cloudflare.com_ww.ricoholdingsgroup.com.	1	IN	TXT	"v=spf1 ip4:1.0.0.1 include:WHOIS.WWW.RICOHOLDINGSGROUP.COM ~all"
+_dmarc.ricoholdingsgroup.com.	1	IN	TXT	"v=DMARC1; p=none; rua=mailto:164b14a0184b43aaae5a9071e7eaa1ef@dmarc-reports.cloudflare.net"
+jewel.ns.cloudflare.com.ricoholdingsgroup.com.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+jewel.ns.cloudflare.com_ricoholdingsgroup.comchuck.ns.cloudflare.com_ww.ricoholdingsgroup.com.	1	IN	TXT	"v=spf1 -all"
